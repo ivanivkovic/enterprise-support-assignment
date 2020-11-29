@@ -2,6 +2,13 @@ public class Calendar
 {
 	private static short[] daysInMonth = new short[]{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
+	/**
+	 * Identifies whether a year is a leap year or not
+	 *
+	 * @param year year to check if it's a leap year
+	 *
+	 * @return boolean - leap year or not 
+	 */
 	public static boolean isLeapYear(int year){
 
 		if(year > 0 && year <= 9999){
@@ -13,6 +20,14 @@ public class Calendar
 	 	return false;
 	}
 
+	/**
+	 * Returns the days in a month
+	 *
+	 * @param month month to check the days for
+	 * @param year year to identify leap years
+	 * 
+	 * @return days in month
+	 */
 	public static int getDaysInMonth(int month, int year){
 		
 		if(month > 0 && month <= 12 && year > 0 && year <= 9999){

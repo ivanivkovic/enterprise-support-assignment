@@ -1,15 +1,18 @@
 import java.awt.*;
 import java.awt.event.*;
 
+// Frame implements Serializable, so all extending classes also implement Serializable.
+@SuppressWarnings("serial")
 public class Dialog extends Frame implements ActionListener
 {
-	Label labelResult; 
+	private Label labelResult; 
 
-	TextField textMonth;
-	TextField textYear;
+	private TextField textMonth;
+	private TextField textYear;
 
-	Button button;
+	private Button button;
 
+	/** Builds the frame and its components, binds  */
 	public void displayDialog(){
 	
 		// Set input fields
@@ -62,6 +65,11 @@ public class Dialog extends Frame implements ActionListener
 		window.setVisible(true);
 	}
 
+	/**
+	 * Event for results button, prints out results based on user input	
+	 * Interface ActionListener implemented, override of inherited method needed 
+	 * @param ActionEvent event data
+	 */
 	@Override
     	public void actionPerformed(ActionEvent e)
 	{
@@ -72,9 +80,8 @@ public class Dialog extends Frame implements ActionListener
 			labelResult.setText("Number of days is: " + Calendar.getDaysInMonth(month, year) + " and the year is" + (Calendar.isLeapYear(year) ? "" : " not") + " a leap year." );
 		}
 		catch(Exception ex){
-			labelResult.setText("Please insert a valid date and month.");
+			labelResult.setText("Please insert numeric values only.");
 		}
-
        	}
 
 }
