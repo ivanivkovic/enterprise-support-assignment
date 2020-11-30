@@ -2,6 +2,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 // Frame implements Serializable, so all extending classes also implement Serializable.
+// No need for serialization, supressing warning
 @SuppressWarnings("serial")
 public class CalendarDialog extends Frame implements ActionListener
 {
