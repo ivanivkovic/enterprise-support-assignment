@@ -13,7 +13,7 @@ public class CalendarDialog extends Frame implements ActionListener
 
 	private Button button;
 
-	/** Builds the frame and its components, binds  */
+	/** Builds the frame and its components, binds the object action listener method to the button object */
 	public void displayDialog(){
 	
 		// Set input fields
