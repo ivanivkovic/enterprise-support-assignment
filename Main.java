@@ -22,7 +22,7 @@ public class Main
 		System.out.println("Number of days in month: 6, year: 10000 is: " + Calendar.getDaysInMonth(6, 10000));
 
 		// Display test GUI
-		Dialog dialog = new Dialog();
+		CalendarDialog dialog = new CalendarDialog();
 		dialog.displayDialog();
 	}
 }
